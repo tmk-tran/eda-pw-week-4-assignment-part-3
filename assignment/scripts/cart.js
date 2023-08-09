@@ -3,28 +3,28 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 let basket = [];
 
-const maxItems = 5; //set a global constant of 5 items allowed in the basket
+const maxItems = 5; // set a global constant of 5 items allowed in the basket
 
 let isFull = false;
 
 function addItem( item ) {
-    basket.push(item); //adds item
+    basket.push(item); // adds item
     return true; // after successfully adding item
 }
 
 console.log( basket );  // should be empty in console
 
 
-let item1 = addItem( 'Kale' );  //defined a 
-console.log( item1 );
-console.log( basket ); 
+let item1 = addItem( 'Kale' );  // defined an item
+console.log( item1 );  // log to see if true
+console.log( basket );   // log items of basket
 
-let item2 = addItem( 'Ice Cream' );
-console.log( item2 );
+let item2 = addItem( 'Ice Cream' );  // defined a second item
+console.log( item2 );  
 console.log( basket );
 
 
-function listItems() { //start listItems
+function listItems() { // start listItems
     for ( let item of basket ) {  // loop to run through basket 
         console.log( item );  // then log the items in it
     }
