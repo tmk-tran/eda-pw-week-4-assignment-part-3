@@ -5,8 +5,6 @@ let basket = [];
 
 const maxItems = 5; // set a global constant of 5 items allowed in the basket
 
-let isFull = false;
-
 function addItem( item ) {
     basket.push(item); // adds item
     return true; // after successfully adding item
@@ -15,7 +13,7 @@ function addItem( item ) {
 console.log( basket );  // should be empty in console
 
 
-let item1 = addItem( 'Kale' );  // defined an item
+let item1 = addItem( 'Kale' );  // defined an item 
 console.log( item1 );  // log to see if true
 console.log( basket );   // log items of basket
 
@@ -25,7 +23,7 @@ console.log( basket );
 
 
 function listItems() { // start listItems
-    for ( let item of basket ) {  // loop to run through basket 
+    for ( let item of basket ) {  // this will loop to run through basket 
         console.log( item );  // then log the items in it
     }
 }  // end listItems
@@ -37,6 +35,18 @@ addItem( 'Bread' );  // added an item for test
 console.log( basket );  
 
 listItems();  // test after adding an item
+
+
+
+
+
+let basket = [ item1, item2,]  // items in basket
+
+function isFull() {  // this starts a new function called 'isFull'
+    return basket.length >= maxItems;  // this should evaluate to 'false' since there are only 2 items in basket
+}
+
+
 
 
 
