@@ -40,11 +40,12 @@ listItems();  // calling the function after adding an item
 
 
 
-let basket = [ item1, item2,]  // items in our basket
+let basketWithItems = [ item1, item2,]  // items in our basket
 
 function isFull() {  // this starts a new function called 'isFull'
-    return basket.length >= maxItems;  // this should evaluate to 'false' since there are only 2 items in basket
+    return basketWithItems.length >= maxItems;  // this should evaluate to 'false' since there are only 2 items in basket
 }
+
 
 
 
