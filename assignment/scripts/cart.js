@@ -55,19 +55,19 @@ if ( isFull( basket ) ) {
 
 console.log( isFull( basket ) ); // using the isFull function to check our basketItems, logging the result (false)
 
-// addItem( 'Bananas' );  // adding some items to test the isFull function, would like it to return true
-// addItem( 'Oatmeal' );
-// addItem( 'Pizza' );
+addItem( 'Bananas' );  // adding some items to test the isFull function, would like it to return true
+addItem( 'Oatmeal' );
+addItem( 'Pizza' );
 
 
 
-// console.log( basket );  // logging the contents of basket
-// listItems();  // calling the listItems function to log the contents of the basket in console
+console.log( basket );  // logging the contents of basket
+listItems();  // calling the listItems function to log the contents of the basket in console
 
-// console.log( isFull( basket ) ); // this will evaluate to true now that we have the max amount of items (5)
-// if ( isFull( basket ) ) {  // if the basket isFull, then 
-    // console.log( 'The basket is full, no more items!' );  // log to test
-// }
+console.log( isFull( basket ) ); // this will evaluate to true now that we have the max amount of items (5)
+if ( isFull( basket ) ) {  // if the basket isFull, then 
+    console.log( 'The basket is full, no more items!' );  // log to test, and it logs correct
+}
 
 
 
