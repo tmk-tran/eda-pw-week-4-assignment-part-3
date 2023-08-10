@@ -42,9 +42,16 @@ listItems();  // calling the function after adding an item
 
 let basketItems = [ item1, item2,]  // items in our basket
 
-function isFull() {  // this starts a new function called 'isFull'
-    return basketItems.length >= maxItems;  // this should evaluate to false since there are only 2 items in basket
+function isFull( items ) {  // this starts a new function called 'isFull'
+    return items.length >= maxItems;  // this should evaluate to false since there are only 2 items in basket
 }
+
+if ( isFull( basketItems ) ) {
+    console.log( 'The basket is full, no more items!' );  // if the isFull is true, then it will log this
+} else {
+    console.log( 'The basket is not full, it has: ' + basketItems.length + ' items.' );  // otherwise, it will log the number of items in the basket
+}
+
 
 console.log( isFull( basketItems ) ); // using the isFull function to check our basketItems, logging the result (false)
 
@@ -52,8 +59,17 @@ addItem( 'Bananas' );  // adding some items to test the isFull function, would l
 addItem( 'Oatmeal' );
 addItem( 'Pizza' );
 
+
+
 console.log( basket );  // logging the contents of basket
 listItems();  // calling the listItems function to log the contents of the basket in console
+
+console.log( isFull( basket ) ); // this will evaluate to true now that we have the max amount of items (5)
+if ( isFull( basket ) ) {  // if the basket isFull, then 
+    console.log( 'The basket is full, no more items!' );  // log to test
+}
+
+
 
 
 
