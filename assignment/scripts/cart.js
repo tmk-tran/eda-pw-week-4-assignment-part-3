@@ -102,7 +102,7 @@ basket.pop();  // -item 1
 
 console.log( 'Removed all items, the basket now contains: ', basket );  // then logging the contents of the basket to make sure it was empty
 displayBasketStatus();  // it is indeed empty
-// Tests are now passed! Moving onto last stretch goal below:
+// All tests now passed! Moving onto last stretch goal. Refer to 'removeItem' function above
 
 
 // start test of removeItem function
@@ -119,6 +119,9 @@ displayBasketStatus();  // the basket should only display having 2 items
 console.log( 'End of tests, the basket should have ' + basket.length + ' items right now:' );
 listItems();
 console.log( 'THE TESTS ARE ADDING THESE ITEMS TO THE BASKET: ');
+
+
+
 
 
 // DO NOT MODIFY
