@@ -6,15 +6,12 @@ let basket = [];
 const maxItems = 5; // set a global constant of 5 items allowed in the basket
 
 function addItem( item ) {  // here is a function to add an item to basket
-    if (isFull()) {
-        return false;  // if the basket is full, return false
-    }
     basket.push(item); // adds item to basket
     return true;
 }
 
 
-addItem( 'Kale' );  // adding an item to basket
+addItem( 'Chicken' );  // adding an item to basket
 addItem( 'Ice Cream' );  // defined a second item
  
 console.log( basket );  // log items of basket  
@@ -36,15 +33,14 @@ listItems();  // calling the function after adding an item
 
 
 function isFull() {  // this starts a new function called 'isFull'
-    return basket.length >= maxItems;  // this should evaluate to false since there are only 2 items in basket
+    if ( basket.length >= maxItems ) {  // this should evaluate to false since there are only 2 items in basket
+        console.log( 'The basket is full, no more items!' );
+        return true;
+    } else {
+        console.log( 'The basket is not full, it has: ' + basket.length + ' items.' );
+        return false;
+    }
 }
-
-if ( isFull() ) {
-    console.log( 'The basket is full, no more items!' );  // if the isFull is true, then it will log this
-} else {
-    console.log( 'The basket is not full, it has: ' + basket.length + ' items.' );  // otherwise, it will log the number of items in the basket
-}
-
 
 console.log( isFull() ); // using the isFull function to check our basketItems, logging the result (false)
 
@@ -52,20 +48,47 @@ addItem( 'Bananas' );  // adding some items to test the isFull function, would l
 addItem( 'Oatmeal' );
 addItem( 'Pizza' );
 
-
+console.log( isFull() );  // logged the isFull function, and it returns 'true'
 
 console.log( basket );  // logging the contents of basket
 listItems();  // calling the listItems function to log the contents of the basket in console
 
 console.log( isFull() ); // this will evaluate to true now that we have the max amount of items (5)
-if ( isFull() ) {  // if the basket isFull, then 
-    console.log( 'The basket is full, no more items!' );  // log to test, and it reads the correct statement
-}
-
 console.log( basket ); // logging the contents of our current basket. Should have 5 items.
 
+function addItem(item) {
+    if (basket.length >= maxItems) {
+        return false;  // basket is full, return false
+    }
+    basket.push(item);
+    return true; // successfully added item, return true
+        
+}
+
+addItem( 'Milk' );  // added some milk to basket
+
+console.log( basket );  // checking the contents of the basket (should be 5 items)
+console.log(addItem());  // Here, I got the 'addItem' function to return 'false' since the basket is full
+
+basket.pop();  // removed an item from the basket to test 'addItem'
+console.log( basket ); // checking the contents of the basket
+console.log(addItem());  // Here, I got the 'addItem' function to return true
 
 
+
+// At this point, I couldn't get a test to pass, specifically -update 'addItem' function stretch goal-
+// To solve my issue, I tried emptying my basket first by removing the items:
+basket.pop();  // -item 5
+basket.pop();  // -item 4
+basket.pop();  // -item 3 
+basket.pop();  // -item 2
+basket.pop();  // -item 1
+
+console.log( basket );  // then logging the contents of the basket to make sure it was empty
+// Tests are now passed! Moving onto next stretch goal below:
+
+console.log( isFull() );
+// function removeItem 
 
 
 
