@@ -118,7 +118,7 @@ displayBasketStatus();  // the basket should only display having 2 items
 
 console.log( 'End of tests, the basket should have ' + basket.length + ' items right now:' );
 listItems();
-console.log( 'THE TESTS ARE ADDING THESE ITEMS TO THE BASKET: ');
+console.log( 'THE TESTS ARE ADDING THE ITEMS BELOW TO THE BASKET: ');
 
 
 
