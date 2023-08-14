@@ -33,7 +33,6 @@ function removeItem( item ) {  // function to remove an item from basket
 }
 
 
-
 function listItems() { // start a function listItems
     for ( let item of basket ) {  // this will loop to run through basket 
         console.log( item );  // then log the items in it
@@ -116,7 +115,21 @@ console.log( 'Removed an item, the test basket now has: ', basket );  // testing
 displayBasketStatus();  // the basket should only display having 2 items
 // end test of removeItem function
 
-console.log( 'End of tests, the basket should have ' + basket.length + ' items right now:' );
+
+// start forgotten function 
+
+function emptyBasket() {
+    basket = [];
+    return basket;
+}
+
+const emptyBasketArray = emptyBasket();
+console.log( 'The basket is now empty, the contents: ', emptyBasketArray );
+
+// end emptyBasket function
+
+
+console.log( 'End of tests, the basket should have ' + basket.length + ' items right now' );
 listItems();
 console.log( 'THE TESTS ARE ADDING THE ITEMS BELOW TO THE BASKET: ');
 
